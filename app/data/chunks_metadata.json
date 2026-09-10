@@ -1,0 +1,192 @@
+[
+  {
+    "source": "00_brand_info.txt",
+    "chunk_id": 0,
+    "text": "VERVE ATHLETICS \u2014 COMPANY INFO\nFounded: 2021 | Headquarters: Austin, Texas\nProducts: Activewear apparel, athletic footwear, and fitness accessories\nWebsite: verveathletics.com (demo)\nSupport Email: support@verveathletics.com\nSupport Hours: Mon-Fri, 9 AM - 6 PM EST\nAverage Monthly Orders: ~4,200\nSupport Team Size: 6 agents handling email + live chat"
+  },
+  {
+    "source": "01_shipping_policy.txt",
+    "chunk_id": 0,
+    "text": "1. Processing Time\nAll orders are processed within 1-2 business days (Mon-Fri, excluding public holidays). Orders placed after 3 PM EST are processed the next business day."
+  },
+  {
+    "source": "01_shipping_policy.txt",
+    "chunk_id": 1,
+    "text": "2. Shipping Methods & Timelines (Domestic - USA)\n- Standard Shipping: 5-7 business days \u2014 $5.99 (FREE on orders over $75)\n- Express Shipping: 2-3 business days \u2014 $14.99\n- Overnight Shipping: 1 business day \u2014 $29.99 (order must be placed before 12 PM EST)"
+  },
+  {
+    "source": "01_shipping_policy.txt",
+    "chunk_id": 2,
+    "text": "3. International Shipping\nWe ship to Canada, UK, EU, and Australia.\n- Standard International: 10-15 business days \u2014 $19.99\n- Express International: 5-7 business days \u2014 $39.99\nCustoms duties and import taxes are the responsibility of the customer and are not included in the shipping cost."
+  },
+  {
+    "source": "01_shipping_policy.txt",
+    "chunk_id": 3,
+    "text": "4. Order Tracking\nA tracking number is emailed automatically once the order ships. Tracking may take up to 24 hours to activate in the carrier's system."
+  },
+  {
+    "source": "01_shipping_policy.txt",
+    "chunk_id": 4,
+    "text": "5. Lost or Delayed Packages\nIf a package shows no tracking movement for 7+ business days (domestic) or 15+ business days (international), contact support for an investigation with the carrier. We do not issue refunds for delayed packages until the carrier confirms the package as lost (typically after 21 days domestic, 30 days international)."
+  },
+  {
+    "source": "01_shipping_policy.txt",
+    "chunk_id": 5,
+    "text": "6. Address Errors\nVerve Athletics is not responsible for packages delayed or lost due to an incorrect shipping address entered by the customer at checkout. If caught before the order ships, contact support immediately to correct it."
+  },
+  {
+    "source": "02_returns_policy.txt",
+    "chunk_id": 0,
+    "text": "1. Return Window\nItems may be returned within 30 days of the delivery date for a full refund or exchange, provided they meet the conditions below."
+  },
+  {
+    "source": "02_returns_policy.txt",
+    "chunk_id": 1,
+    "text": "2. Condition Requirements\n- Items must be unworn, unwashed, and undamaged\n- Original tags must still be attached\n- Footwear must be returned in the original shoebox, which must be placed inside a shipping box (not used as the shipping box itself)\n- Swimwear and underwear are final sale and cannot be returned for hygiene reasons"
+  },
+  {
+    "source": "02_returns_policy.txt",
+    "chunk_id": 2,
+    "text": "3. How to Initiate a Return\nCustomers can start a return through the \"My Orders\" page on our website or by emailing support with their order number. A prepaid return label is provided for domestic orders. International returns are the customer's responsibility to ship back."
+  },
+  {
+    "source": "02_returns_policy.txt",
+    "chunk_id": 3,
+    "text": "4. Refund Processing Time\nOnce we receive the returned item, refunds are processed within 5-7 business days back to the original payment method. Store credit refunds are processed within 1-2 business days."
+  },
+  {
+    "source": "02_returns_policy.txt",
+    "chunk_id": 4,
+    "text": "5. Exchanges\nExchanges for a different size or color are free of charge (no shipping cost) within the 30-day window, subject to availability. If the requested item is out of stock, we issue a refund instead."
+  },
+  {
+    "source": "02_returns_policy.txt",
+    "chunk_id": 5,
+    "text": "6. Sale Items\nItems purchased during a sale (marked 30% off or more) are eligible for store credit only, not a cash refund, unless the item is defective."
+  },
+  {
+    "source": "02_returns_policy.txt",
+    "chunk_id": 6,
+    "text": "7. Return Shipping Costs\nReturns due to customer preference (wrong size, changed mind) are free with our prepaid label."
+  },
+  {
+    "source": "02_returns_policy.txt",
+    "chunk_id": 7,
+    "text": "8. Wrong Item or Our Error\nIf you received the wrong item, or the mistake was on our end, there is no return shipping cost. You may also request expedited replacement shipping at no charge."
+  },
+  {
+    "source": "03_website_faq.txt",
+    "chunk_id": 0,
+    "text": "Q: How long do I have to return an item?\nA: You have 14 days from the date you receive your order to return it for a refund. Items must be unworn with tags attached."
+  },
+  {
+    "source": "03_website_faq.txt",
+    "chunk_id": 1,
+    "text": "Q: Do you offer free shipping?\nA: Yes! Orders over $75 ship free within the USA using our Standard Shipping option (5-7 business days)."
+  },
+  {
+    "source": "03_website_faq.txt",
+    "chunk_id": 2,
+    "text": "Q: Can I exchange an item for a different size?\nA: Absolutely \u2014 exchanges are free within our return window as long as the item is in stock."
+  },
+  {
+    "source": "03_website_faq.txt",
+    "chunk_id": 3,
+    "text": "Q: What if my order arrives damaged?\nA: Contact our support team within 48 hours of delivery with photos of the damage, and we'll send a free replacement or issue a full refund."
+  },
+  {
+    "source": "03_website_faq.txt",
+    "chunk_id": 4,
+    "text": "Q: Do you ship internationally?\nA: Yes, we currently ship to Canada, the UK, the EU, and Australia."
+  },
+  {
+    "source": "03_website_faq.txt",
+    "chunk_id": 5,
+    "text": "Q: How long does a refund take once you receive my return?\nA: Refunds are typically processed within 3-5 business days of us receiving the item back."
+  },
+  {
+    "source": "03_website_faq.txt",
+    "chunk_id": 6,
+    "text": "Q: Are sale items returnable?\nA: All sale items are final sale and cannot be returned or exchanged."
+  },
+  {
+    "source": "04_warranty_policy.txt",
+    "chunk_id": 0,
+    "text": "1. Manufacturer Warranty\nAll footwear comes with a 6-month warranty against manufacturing defects (sole separation, stitching failure, zipper malfunction). Apparel comes with a 3-month warranty against fabric defects (seam tearing, print peeling)."
+  },
+  {
+    "source": "04_warranty_policy.txt",
+    "chunk_id": 1,
+    "text": "2. What Is NOT Covered\n- Normal wear and tear\n- Damage from improper washing (see care label)\n- Damage from misuse (e.g., wearing running shoes for hiking on rocky terrain)"
+  },
+  {
+    "source": "04_warranty_policy.txt",
+    "chunk_id": 2,
+    "text": "3. Reporting a Defect\nContact support within the warranty period with your order number and photos of the defect. Our QA team reviews within 2 business days."
+  },
+  {
+    "source": "04_warranty_policy.txt",
+    "chunk_id": 3,
+    "text": "4. Resolution\nApproved warranty claims receive a free replacement of the same item. If out of stock, customer may choose store credit or a refund."
+  },
+  {
+    "source": "04_warranty_policy.txt",
+    "chunk_id": 4,
+    "text": "5. Damaged on Arrival\nIf an item arrives damaged during shipping (not a manufacturing defect), report it within 7 days of delivery with photos. This is handled as an immediate free replacement or refund, not a warranty claim."
+  },
+  {
+    "source": "05_cancellation_policy.txt",
+    "chunk_id": 0,
+    "text": "1. Cancellation Window\nOrders can be cancelled free of charge within 1 hour of placing the order, as long as it has not yet entered the fulfillment process. After 1 hour, the order typically cannot be cancelled since fulfillment begins automatically."
+  },
+  {
+    "source": "05_cancellation_policy.txt",
+    "chunk_id": 1,
+    "text": "2. Modifying an Order\nChanges to size, color, or shipping address can only be requested within the same 1-hour window. Contact support immediately \u2014 we cannot guarantee changes once fulfillment has started."
+  },
+  {
+    "source": "05_cancellation_policy.txt",
+    "chunk_id": 2,
+    "text": "3. Cancelling After Fulfillment Has Started\nIf the order has already entered fulfillment, it cannot be cancelled. Customers must wait for delivery and initiate a standard return instead."
+  },
+  {
+    "source": "05_cancellation_policy.txt",
+    "chunk_id": 3,
+    "text": "4. Order Not Yet Shipped After 5 Days\nIf an order has not shipped within 5 business days of being placed (excluding pre-order items), customers may request cancellation and a full refund, no questions asked."
+  },
+  {
+    "source": "05_cancellation_policy.txt",
+    "chunk_id": 4,
+    "text": "5. Pre-Orders\nPre-order items can be cancelled any time before the item ships, since pre-orders have longer, published fulfillment windows."
+  },
+  {
+    "source": "06_account_payment_policy.txt",
+    "chunk_id": 0,
+    "text": "1. Accepted Payment Methods\nWe accept Visa, Mastercard, American Express, PayPal, Apple Pay, and Google Pay. We do not accept cash on delivery or bank transfers."
+  },
+  {
+    "source": "06_account_payment_policy.txt",
+    "chunk_id": 1,
+    "text": "2. Payment Failures\nIf a payment fails after an order is placed, the order is held for 24 hours for the customer to retry payment before it is automatically cancelled."
+  },
+  {
+    "source": "06_account_payment_policy.txt",
+    "chunk_id": 2,
+    "text": "3. Promo Codes\nOnly one promo code can be applied per order. Promo codes cannot be combined with the loyalty rewards discount. Promo codes cannot be applied retroactively to already-placed orders."
+  },
+  {
+    "source": "06_account_payment_policy.txt",
+    "chunk_id": 3,
+    "text": "4. Verve Rewards (Loyalty Program)\nCustomers earn 1 point per $1 spent. 100 points = $5 off a future order. Points expire 12 months after they are earned. Points are credited 7 days after delivery (post return-window buffer) to prevent point fraud from returned items."
+  },
+  {
+    "source": "06_account_payment_policy.txt",
+    "chunk_id": 4,
+    "text": "5. Account Deletion\nCustomers may request account deletion via support. Order history is retained for 7 years for tax/legal record-keeping even after account deletion, per financial regulations, but is no longer accessible to the customer."
+  },
+  {
+    "source": "06_account_payment_policy.txt",
+    "chunk_id": 5,
+    "text": "6. Gift Cards\nGift cards do not expire and can be used for partial payment, combined with a promo code, but not combined with loyalty points redemption in the same order."
+  }
+]

@@ -1,0 +1,18 @@
+# --- Reused from AI Support Agent (RAG core) ---
+google-genai>=1.0.0
+faiss-cpu>=1.7.4
+flask>=3.0.0
+python-dotenv>=1.0.0
+numpy>=1.24.0
+flask-cors
+flask-limiter
+
+# --- New: voice layer ---
+assemblyai>=1.0.0
+pyaudio
+elevenlabs>=1.0.0
+
+# --- New: real-time WebSocket bridge (mic in / audio out) ---
+flask-socketio
+python-socketio
+eventlet

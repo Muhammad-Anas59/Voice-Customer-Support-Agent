@@ -1,0 +1,122 @@
+{"timestamp": "2026-08-23T13:46:40.500676", "question": "How long does shipping take?", "handler": "policy", "resolved": true, "confidence": 0.64, "category": null}
+{"timestamp": "2026-08-23T13:46:40.505433", "question": "Where's my order 1002?", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-23T13:46:40.506531", "question": "What's your return policy?", "handler": "policy", "resolved": false, "confidence": 0.66, "category": "policy_conflict"}
+{"timestamp": "2026-08-23T13:46:40.507499", "question": "This is unacceptable, contacting my lawyer", "handler": "sentiment_block", "resolved": false, "confidence": null, "category": "sentiment_urgency"}
+{"timestamp": "2026-08-23T13:55:09.440394", "question": "80.00", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-23T13:57:39.964430", "question": "How long does shipping take?", "handler": "policy", "resolved": true, "confidence": 0.6377134323120117, "category": null}
+{"timestamp": "2026-08-23T14:44:03.399886", "question": "Do you sell yoga mats?", "handler": "policy", "resolved": true, "confidence": 0.5932579636573792, "category": null}
+{"timestamp": "2026-08-23T14:44:43.884601", "question": "80.00", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-23T15:06:30.940837", "question": "Do you sell yoga mats?", "handler": "policy", "resolved": false, "confidence": 0.5932579636573792, "category": "low_confidence"}
+{"timestamp": "2026-08-23T15:06:41.795010", "question": "My package hasn't moved in 10 days, what should I do?", "handler": "policy", "resolved": true, "confidence": 0.6313326358795166, "category": null}
+{"timestamp": "2026-08-23T15:10:25.897226", "question": "Can I cancel my order?", "handler": "policy", "resolved": true, "confidence": 0.6738418936729431, "category": null}
+{"timestamp": "2026-08-23T15:10:36.412749", "question": "What payment methods do you accept?", "handler": "policy", "resolved": true, "confidence": 0.663379967212677, "category": null}
+{"timestamp": "2026-08-23T15:10:59.654448", "question": "Do you have a loyalty program?", "handler": "policy", "resolved": true, "confidence": 0.6346337795257568, "category": null}
+{"timestamp": "2026-08-23T15:12:09.386343", "question": "Can I change my shipping address?", "handler": "policy", "resolved": true, "confidence": 0.6427065134048462, "category": null}
+{"timestamp": "2026-08-23T15:12:22.927930", "question": "I want a refund for my damaged shirt", "handler": "policy", "resolved": true, "confidence": 0.635421633720398, "category": null}
+{"timestamp": "2026-08-23T15:12:44.033302", "question": "What if I received the wrong item?", "handler": "policy", "resolved": false, "confidence": 0.6286981105804443, "category": "low_confidence"}
+{"timestamp": "2026-08-23T15:54:23.391580", "question": "What if I received the wrong item?", "handler": "policy", "resolved": true, "confidence": 0.6286981105804443, "category": null}
+{"timestamp": "2026-08-23T15:55:14.117059", "question": "80", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-23T17:07:18.892898", "question": "80.00", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-23T17:07:42.254049", "question": "What is the shipping policy", "handler": "policy", "resolved": true, "confidence": 0.6383742094039917, "category": null}
+{"timestamp": "2026-08-23T17:08:28.668176", "question": "80", "handler": "order", "resolved": false, "confidence": null, "category": "order_not_found"}
+{"timestamp": "2026-08-26T14:17:19.534347", "question": "How long does standard shipping take?", "handler": "policy", "resolved": true, "confidence": 0.6669533252716064, "category": null}
+{"timestamp": "2026-08-26T14:17:36.401518", "question": "How long does international shipping take?", "handler": "policy", "resolved": true, "confidence": 0.6547892093658447, "category": null}
+{"timestamp": "2026-08-26T14:17:43.208655", "question": "What happens if my package is lost?", "handler": "policy", "resolved": true, "confidence": 0.6649131178855896, "category": null}
+{"timestamp": "2026-08-26T14:17:53.419015", "question": "Does my footwear have a warranty?", "handler": "policy", "resolved": true, "confidence": 0.6818200945854187, "category": null}
+{"timestamp": "2026-08-26T14:26:00.565830", "question": "How long does standard shipping take?", "handler": "policy", "resolved": true, "confidence": 0.6669533252716064, "category": null}
+{"timestamp": "2026-08-26T14:26:08.642964", "question": "How long does international shipping take?", "handler": "policy", "resolved": true, "confidence": 0.6547892093658447, "category": null}
+{"timestamp": "2026-08-26T14:26:17.660425", "question": "What happens if my package is lost?", "handler": "policy", "resolved": true, "confidence": 0.6649131178855896, "category": null}
+{"timestamp": "2026-08-26T14:27:18.282321", "question": "Does my footwear have a warranty?", "handler": "policy", "resolved": true, "confidence": 0.6818200945854187, "category": null}
+{"timestamp": "2026-08-26T14:27:26.609274", "question": "What's the warranty on apparel?", "handler": "policy", "resolved": true, "confidence": 0.6893419623374939, "category": null}
+{"timestamp": "2026-08-26T14:27:38.409293", "question": "Can I cancel my order after placing it?", "handler": "policy", "resolved": true, "confidence": 0.6787274479866028, "category": null}
+{"timestamp": "2026-08-26T14:28:52.335217", "question": "What payment methods do you accept?", "handler": "policy", "resolved": true, "confidence": 0.663379967212677, "category": null}
+{"timestamp": "2026-08-26T14:29:26.827206", "question": "How does the rewards program work?", "handler": "policy", "resolved": true, "confidence": 0.6453637480735779, "category": null}
+{"timestamp": "2026-08-26T14:29:36.702941", "question": "What if I received the wrong item?", "handler": "policy", "resolved": true, "confidence": 0.6286981105804443, "category": null}
+{"timestamp": "2026-08-26T14:29:48.572486", "question": "Can I change my shipping address?", "handler": "policy", "resolved": true, "confidence": 0.6427065134048462, "category": null}
+{"timestamp": "2026-08-26T14:29:57.710992", "question": "How long do I have to return an item?", "handler": "policy", "resolved": false, "confidence": 0.6653854250907898, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T14:30:06.888915", "question": "How long does a refund take?", "handler": "policy", "resolved": false, "confidence": 0.6614925265312195, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T14:30:19.839639", "question": "Can I return a sale item?", "handler": "policy", "resolved": false, "confidence": 0.728164553642273, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T14:31:58.935437", "question": "What if my item arrives damaged?", "handler": "policy", "resolved": false, "confidence": 0.6811949610710144, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T14:32:07.759247", "question": "Do you sell yoga mats?", "handler": "policy", "resolved": false, "confidence": 0.5932579636573792, "category": "low_confidence"}
+{"timestamp": "2026-08-26T14:32:15.554803", "question": "Can you recommend a good running playlist?", "handler": "policy", "resolved": false, "confidence": 0.5410913825035095, "category": "low_confidence"}
+{"timestamp": "2026-08-26T14:52:21.169489", "question": "How long does standard shipping take?", "handler": "policy", "resolved": true, "confidence": 0.6669533252716064, "category": null}
+{"timestamp": "2026-08-26T14:53:27.545607", "question": "What happens if my package is lost?", "handler": "policy", "resolved": true, "confidence": 0.6649131178855896, "category": null}
+{"timestamp": "2026-08-26T14:53:57.183306", "question": "Does my footwear have a warranty?", "handler": "policy", "resolved": true, "confidence": 0.6818200945854187, "category": null}
+{"timestamp": "2026-08-26T14:54:18.974026", "question": "What's the warranty on apparel?", "handler": "policy", "resolved": true, "confidence": 0.6893419623374939, "category": null}
+{"timestamp": "2026-08-26T14:55:31.771883", "question": "Can I cancel my order after placing it?", "handler": "policy", "resolved": true, "confidence": 0.6787274479866028, "category": null}
+{"timestamp": "2026-08-26T14:56:11.103057", "question": "What payment methods do you accept?", "handler": "policy", "resolved": true, "confidence": 0.663379967212677, "category": null}
+{"timestamp": "2026-08-26T14:56:36.053915", "question": "How does the rewards program work?", "handler": "policy", "resolved": true, "confidence": 0.6453637480735779, "category": null}
+{"timestamp": "2026-08-26T14:57:09.764255", "question": "What if I received the wrong item?", "handler": "policy", "resolved": true, "confidence": 0.6286981105804443, "category": null}
+{"timestamp": "2026-08-26T14:57:29.646263", "question": "Can I change my shipping address?", "handler": "policy", "resolved": true, "confidence": 0.6427065134048462, "category": null}
+{"timestamp": "2026-08-26T14:57:44.398238", "question": "How long do I have to return an item?", "handler": "policy", "resolved": false, "confidence": 0.6653854250907898, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T14:57:58.973599", "question": "How long does a refund take?", "handler": "policy", "resolved": false, "confidence": 0.6614925265312195, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T14:58:14.846627", "question": "Can I return a sale item?", "handler": "policy", "resolved": false, "confidence": 0.728164553642273, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T14:58:32.600689", "question": "What if my item arrives damaged?", "handler": "policy", "resolved": false, "confidence": 0.6811949610710144, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T14:58:58.824474", "question": "Do you sell yoga mats?", "handler": "policy", "resolved": false, "confidence": 0.5932579636573792, "category": "low_confidence"}
+{"timestamp": "2026-08-26T14:59:13.633507", "question": "Can you recommend a good running playlist?", "handler": "policy", "resolved": false, "confidence": 0.5410913825035095, "category": "low_confidence"}
+{"timestamp": "2026-08-26T15:01:26.775155", "question": "Is there a fee to swap for a different color?", "handler": "policy", "resolved": true, "confidence": 0.612217366695404, "category": null}
+{"timestamp": "2026-08-26T15:01:54.561239", "question": "What if my package sat at the same tracking status for over a week?", "handler": "policy", "resolved": true, "confidence": 0.6266316771507263, "category": null}
+{"timestamp": "2026-08-26T15:02:04.312341", "question": "How many points do I need for a $5 discount?", "handler": "policy", "resolved": true, "confidence": 0.6439260244369507, "category": null}
+{"timestamp": "2026-08-26T15:02:15.377722", "question": "Do my reward points expire?", "handler": "policy", "resolved": true, "confidence": 0.6171700954437256, "category": null}
+{"timestamp": "2026-08-26T15:02:24.064733", "question": "Can I use a gift card and a promo code on the same order?", "handler": "policy", "resolved": true, "confidence": 0.6763983964920044, "category": null}
+{"timestamp": "2026-08-26T15:03:05.936768", "question": "What happens if my payment doesn't go through?", "handler": "policy", "resolved": true, "confidence": 0.6489413976669312, "category": null}
+{"timestamp": "2026-08-26T15:03:16.469492", "question": "Do you keep my order history after I delete my account?", "handler": "policy", "resolved": true, "confidence": 0.6947667002677917, "category": null}
+{"timestamp": "2026-08-26T15:03:27.981719", "question": "Is cash on delivery available?", "handler": "policy", "resolved": true, "confidence": 0.5859482288360596, "category": null}
+{"timestamp": "2026-08-26T15:03:39.768540", "question": "Within how many days must I return something to get my money back?", "handler": "policy", "resolved": false, "confidence": 0.6563999056816101, "category": "policy_conflict"}
+{"timestamp": "2026-08-26T15:04:05.419276", "question": "Do you charge for return shipping if you sent me the wrong size, versus if I just changed my mind?", "handler": "policy", "resolved": true, "confidence": 0.6936110258102417, "category": null}
+{"timestamp": "2026-08-26T15:04:14.424402", "question": "Can I speak to a human right now?", "handler": "policy", "resolved": false, "confidence": 0.5761631727218628, "category": "low_confidence"}
+{"timestamp": "2026-08-26T15:04:22.587894", "question": "Do you have a physical store in Lahore?", "handler": "policy", "resolved": false, "confidence": 0.5771318674087524, "category": "low_confidence"}
+{"timestamp": "2026-08-26T15:04:29.857548", "question": "What's the weather like today?", "handler": "policy", "resolved": false, "confidence": 0.5369853973388672, "category": "low_confidence"}
+{"timestamp": "2026-08-26T15:04:56.816647", "question": "What's your return policy, and also do you ship to Canada?", "handler": "policy", "resolved": true, "confidence": 0.6660669445991516, "category": null}
+{"timestamp": "2026-08-26T15:34:54.829718", "question": "What's your return policy, and also do you ship to Canada?", "handler": "policy", "resolved": true, "confidence": 0.6660669445991516, "category": null}
+{"timestamp": "2026-08-27T15:30:00.526392", "question": "How long does the standard shipping takes?", "handler": "policy", "resolved": true, "confidence": 0.6547278761863708, "category": null}
+{"timestamp": "2026-08-27T15:32:32.052939", "question": "How long do I have to return any item?", "handler": "policy", "resolved": false, "confidence": 0.6658983826637268, "category": "policy_conflict"}
+{"timestamp": "2026-08-27T15:34:18.871857", "question": "80.0", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-27T15:50:52.745642", "question": "How long does standard shipping take?", "handler": "policy", "resolved": true, "confidence": 0.6669533252716064, "category": null}
+{"timestamp": "2026-08-27T15:51:05.688129", "question": "How long does international shipping take?", "handler": "policy", "resolved": true, "confidence": 0.6547892093658447, "category": null}
+{"timestamp": "2026-08-27T15:51:12.910226", "question": "What happens if my package is lost?", "handler": "policy", "resolved": true, "confidence": 0.6649131178855896, "category": null}
+{"timestamp": "2026-08-27T15:51:21.838468", "question": "Does my footwear have a warranty?", "handler": "policy", "resolved": true, "confidence": 0.6818200945854187, "category": null}
+{"timestamp": "2026-08-27T15:52:18.879882", "question": "What's the warranty on apparel?", "handler": "policy", "resolved": true, "confidence": 0.6893419623374939, "category": null}
+{"timestamp": "2026-08-27T15:52:26.847257", "question": "Can I cancel my order after placing it?", "handler": "policy", "resolved": true, "confidence": 0.6787274479866028, "category": null}
+{"timestamp": "2026-08-27T15:52:39.610517", "question": "What payment methods do you accept?", "handler": "policy", "resolved": true, "confidence": 0.663379967212677, "category": null}
+{"timestamp": "2026-08-27T15:52:49.607633", "question": "How does the rewards program work?", "handler": "policy", "resolved": true, "confidence": 0.6453637480735779, "category": null}
+{"timestamp": "2026-08-27T15:52:58.145143", "question": "What if I received the wrong item?", "handler": "policy", "resolved": true, "confidence": 0.6286981105804443, "category": null}
+{"timestamp": "2026-08-27T15:53:06.379743", "question": "Can I change my shipping address?", "handler": "policy", "resolved": true, "confidence": 0.6427065134048462, "category": null}
+{"timestamp": "2026-08-27T15:53:15.642385", "question": "How long do I have to return an item?", "handler": "policy", "resolved": false, "confidence": 0.6653854250907898, "category": "policy_conflict"}
+{"timestamp": "2026-08-27T15:54:14.241701", "question": "How long does a refund take?", "handler": "policy", "resolved": false, "confidence": 0.6614925265312195, "category": "policy_conflict"}
+{"timestamp": "2026-08-27T15:54:21.238804", "question": "Can I return a sale item?", "handler": "policy", "resolved": false, "confidence": 0.728164553642273, "category": "policy_conflict"}
+{"timestamp": "2026-08-27T15:54:30.586285", "question": "What if my item arrives damaged?", "handler": "policy", "resolved": false, "confidence": 0.6811949610710144, "category": "policy_conflict"}
+{"timestamp": "2026-08-27T15:54:39.272298", "question": "Do you sell yoga mats?", "handler": "policy", "resolved": false, "confidence": 0.5932579636573792, "category": "low_confidence"}
+{"timestamp": "2026-08-27T15:54:45.792536", "question": "Can you recommend a good running playlist?", "handler": "policy", "resolved": false, "confidence": 0.5410913825035095, "category": "low_confidence"}
+{"timestamp": "2026-08-27T15:55:52.560756", "question": "Is there a fee to swap for a different color?", "handler": "policy", "resolved": true, "confidence": 0.612217366695404, "category": null}
+{"timestamp": "2026-08-27T15:56:04.899381", "question": "What if my package sat at the same tracking status for over a week?", "handler": "policy", "resolved": true, "confidence": 0.6266316771507263, "category": null}
+{"timestamp": "2026-08-27T15:56:13.143975", "question": "How many points do I need for a $5 discount?", "handler": "policy", "resolved": true, "confidence": 0.6439260244369507, "category": null}
+{"timestamp": "2026-08-27T15:56:24.304720", "question": "Do my reward points expire?", "handler": "policy", "resolved": true, "confidence": 0.6171700954437256, "category": null}
+{"timestamp": "2026-08-27T15:57:20.582244", "question": "Can I use a gift card and a promo code on the same order?", "handler": "policy", "resolved": true, "confidence": 0.6763983964920044, "category": null}
+{"timestamp": "2026-08-27T15:57:27.947466", "question": "What happens if my payment doesn't go through?", "handler": "policy", "resolved": true, "confidence": 0.6489413976669312, "category": null}
+{"timestamp": "2026-08-27T15:57:37.326527", "question": "Do you keep my order history after I delete my account?", "handler": "policy", "resolved": true, "confidence": 0.6947667002677917, "category": null}
+{"timestamp": "2026-08-27T15:57:46.972612", "question": "Is cash on delivery available?", "handler": "policy", "resolved": true, "confidence": 0.5859482288360596, "category": null}
+{"timestamp": "2026-08-27T15:57:56.241629", "question": "Within how many days must I return something to get my money back?", "handler": "policy", "resolved": false, "confidence": 0.6563999056816101, "category": "policy_conflict"}
+{"timestamp": "2026-08-27T15:58:07.621828", "question": "Do you charge for return shipping if you sent me the wrong size, versus if I just changed my mind?", "handler": "policy", "resolved": true, "confidence": 0.6936110258102417, "category": null}
+{"timestamp": "2026-08-27T15:58:15.884327", "question": "Can I speak to a human right now?", "handler": "policy", "resolved": false, "confidence": 0.5761631727218628, "category": "low_confidence"}
+{"timestamp": "2026-08-27T15:58:26.039920", "question": "Do you have a physical store in Lahore?", "handler": "policy", "resolved": false, "confidence": 0.5771318674087524, "category": "low_confidence"}
+{"timestamp": "2026-08-27T15:59:19.051496", "question": "What's the weather like today?", "handler": "policy", "resolved": false, "confidence": 0.5369853973388672, "category": "low_confidence"}
+{"timestamp": "2026-08-27T15:59:27.506424", "question": "What's your return policy, and also do you ship to Canada?", "handler": "policy", "resolved": true, "confidence": 0.6660669445991516, "category": null}
+{"timestamp": "2026-08-28T21:48:25.814181", "question": "How long do I have to return an item?", "handler": "policy", "resolved": false, "confidence": 0.6653854250907898, "category": "policy_conflict"}
+{"timestamp": "2026-08-28T21:49:33.579481", "question": "80", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-28T21:50:28.836239", "question": "This is unacceptable,I'm contacting my lawyer", "handler": "sentiment_block", "resolved": false, "confidence": null, "category": "sentiment_urgency"}
+{"timestamp": "2026-08-28T23:08:12.599809", "question": "How long do I have to return an item?", "handler": "policy", "resolved": false, "confidence": 0.6653854250907898, "category": "policy_conflict"}
+{"timestamp": "2026-08-28T23:09:32.353355", "question": "80", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-28T23:10:16.179931", "question": "This is unaccepatable,I'm contacting my lawyer", "handler": "sentiment_block", "resolved": false, "confidence": null, "category": "sentiment_urgency"}
+{"timestamp": "2026-08-28T23:14:30.823678", "question": "How long do I have to return an item?", "handler": "policy", "resolved": false, "confidence": 0.6653854250907898, "category": "policy_conflict"}
+{"timestamp": "2026-08-28T23:15:18.256124", "question": "80", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-28T23:16:10.585861", "question": "This is unacceptable,I 'm contacting my lawyer", "handler": "sentiment_block", "resolved": false, "confidence": null, "category": "sentiment_urgency"}
+{"timestamp": "2026-08-28T23:19:23.947957", "question": "How long do I have to return an item?", "handler": "policy", "resolved": false, "confidence": 0.6653854250907898, "category": "policy_conflict"}
+{"timestamp": "2026-08-28T23:20:12.330165", "question": "80", "handler": "order", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-08-28T23:21:42.189000", "question": "This is unacceptable,I'm contacting my lawyer", "handler": "sentiment_block", "resolved": false, "confidence": null, "category": "sentiment_urgency"}
+{"timestamp": "2026-09-10T18:09:49.840905", "question": "Hello.", "handler": "policy", "resolved": true, "confidence": 0.5772334933280945, "category": null}
+{"timestamp": "2026-09-10T18:13:24.070939", "question": "I am asking, what is the capital of Pakistan?", "handler": "policy", "resolved": false, "confidence": 0.5316565036773682, "category": "low_confidence"}
+{"timestamp": "2026-09-10T18:13:26.733623", "question": "What is the capital of Pakistan?", "handler": "policy", "resolved": false, "confidence": 0.5323338508605957, "category": "low_confidence"}
+{"timestamp": "2026-09-10T18:13:55.179782", "question": "What is your return policy?", "handler": "policy", "resolved": false, "confidence": 0.652799129486084, "category": "policy_conflict"}
+{"timestamp": "2026-09-10T18:14:26.627548", "question": "8, 0.0.", "handler": "order", "resolved": false, "confidence": null, "category": "order_not_found"}
+{"timestamp": "2026-09-10T18:15:34.567391", "question": "Please tell me your shipping details.", "handler": "policy", "resolved": true, "confidence": 0.637234091758728, "category": null}
