@@ -17,6 +17,7 @@ import os
 import json
 from datetime import datetime, timezone
 from google import genai
+from google.genai.types import GenerateContentConfig
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
@@ -96,7 +97,13 @@ def detect_conflicts(question, chunks):
     try:
         response = client.models.generate_content(
             model=CONFLICT_MODEL,
-            contents=prompt
+            contents=prompt,
+            # temperature=0: this is a yes/no judgment call, not creative
+            # generation. Without this, the SAME retrieved chunks could
+            # get flagged as conflicting on one run and not the next,
+            # purely from sampling randomness - not from anything actually
+            # changing about the question or the policy text.
+            config=GenerateContentConfig(temperature=0)
         )
         raw = response.text.strip()
         # Strip markdown fences if the model adds them despite instructions

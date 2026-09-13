@@ -15,4 +15,11 @@ elevenlabs>=1.0.0
 # --- New: real-time WebSocket bridge (mic in / audio out) ---
 flask-socketio
 python-socketio
-eventlet
+simple-websocket
+# NOTE: eventlet was tried first but conflicts with AssemblyAI's SDK,
+# which uses real OS threads for its keepalive ping (not greenlet-safe).
+# Switched to Flask-SocketIO's "threading" async_mode instead, which
+# needs simple-websocket to support real WebSocket transport on
+# Werkzeug's dev server. eventlet is no longer required - remove it
+# from your venv if you want to keep things clean:
+#   pip uninstall eventlet

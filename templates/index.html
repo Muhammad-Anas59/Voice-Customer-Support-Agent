@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Verve Athletics - Voice Support (Day 3-4 test)</title>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body style="font-family: sans-serif; max-width: 600px; margin: 40px auto;">
+  <h2>Voice Support Agent - Day 3-4 test</h2>
+  <button id="startBtn">Start listening</button>
+  <button id="stopBtn" disabled>Stop</button>
+  <p id="status">Not connected</p>
+  <h4>You said:</h4>
+  <p id="transcript" style="color: #555;"></p>
+  <h4>Agent:</h4>
+  <p id="answer" style="color: #063;"></p>
+  <audio id="player"></audio>
+
+  <script>
+    const socket = io();
+    const statusEl = document.getElementById("status");
+    const transcriptEl = document.getElementById("transcript");
+    const answerEl = document.getElementById("answer");
+    const player = document.getElementById("player");
+
+    let audioCtx, processor, source, stream;
+    let sessionActive = false; // guards against a late agent_audio arriving after Stop
+
+    socket.on("connect", () => { statusEl.textContent = "Connected. Click Start."; });
+    socket.on("disconnect", () => { statusEl.textContent = "Disconnected."; });
+
+    socket.on("partial_transcript", (d) => { transcriptEl.textContent = d.text; });
+    socket.on("status", (d) => { statusEl.textContent = d.text; });
+    socket.on("connection_error", (d) => {
+      statusEl.textContent = d.text;
+      statusEl.style.color = "#c00";
+    });
+    socket.on("final_transcript", (d) => {
+      transcriptEl.textContent = d.text;
+      statusEl.textContent = "Thinking...";
+    });
+    socket.on("agent_text", (d) => { answerEl.textContent = d.text; });
+    socket.on("agent_audio", (d) => {
+      if (!sessionActive) return; // Stop was clicked before this answer arrived - discard it
+      statusEl.textContent = "Agent speaking...";
+      const blob = b64ToBlob(d.audio_b64, d.mime);
+      player.src = URL.createObjectURL(blob);
+      player.play();
+    });
+    player.addEventListener("ended", () => {
+      socket.emit("agent_audio_done");
+      statusEl.textContent = "Listening...";
+    });
+
+    function b64ToBlob(b64, mime) {
+      const bytes = atob(b64);
+      const arr = new Uint8Array(bytes.length);
+      for (let i = 0; i < bytes.length; i++) arr[i] = bytes.charCodeAt(i);
+      return new Blob([arr], { type: mime });
+    }
+
+    // Downsample Float32 audio at the device's native rate to 16kHz Int16 PCM,
+    // matching what AssemblyAI / the server expects.
+    function downsampleTo16k(buffer, inputRate) {
+      const ratio = inputRate / 16000;
+      const outLength = Math.floor(buffer.length / ratio);
+      const out = new Int16Array(outLength);
+      for (let i = 0; i < outLength; i++) {
+        const s = buffer[Math.floor(i * ratio)];
+        out[i] = Math.max(-1, Math.min(1, s)) * 0x7fff;
+      }
+      return out;
+    }
+
+    document.getElementById("startBtn").onclick = async () => {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      audioCtx = new AudioContext();
+      source = audioCtx.createMediaStreamSource(stream);
+      processor = audioCtx.createScriptProcessor(4096, 1, 1);
+
+      processor.onaudioprocess = (e) => {
+        const input = e.inputBuffer.getChannelData(0);
+        const pcm16 = downsampleTo16k(input, audioCtx.sampleRate);
+        socket.emit("audio_chunk", pcm16.buffer);
+      };
+
+      source.connect(processor);
+      processor.connect(audioCtx.destination);
+
+      sessionActive = true;
+      statusEl.textContent = "Listening...";
+      statusEl.style.color = "";
+      document.getElementById("startBtn").disabled = true;
+      document.getElementById("stopBtn").disabled = false;
+    };
+
+    document.getElementById("stopBtn").onclick = () => {
+      sessionActive = false;
+
+      // Stop any TTS audio that's currently playing, instead of letting
+      // it finish reading the whole answer.
+      player.pause();
+      player.currentTime = 0;
+      player.removeAttribute("src");
+      player.load();
+
+      // Let the server know playback stopped so agent_speaking clears -
+      // otherwise the mic stays "muted" server-side until a real ended
+      // event that will now never fire.
+      socket.emit("agent_audio_done");
+
+      processor && processor.disconnect();
+      source && source.disconnect();
+      stream && stream.getTracks().forEach((t) => t.stop());
+      statusEl.textContent = "Stopped.";
+      document.getElementById("startBtn").disabled = false;
+      document.getElementById("stopBtn").disabled = true;
+    };
+  </script>
+</body>
+</html>

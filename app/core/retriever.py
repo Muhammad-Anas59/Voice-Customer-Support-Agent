@@ -147,7 +147,16 @@ def answer_question(question, index, chunks):
             "conflicts": []
         }
 
-    conflict_result = detect_conflicts(question, retrieved)
+    conflict_candidates = [c for c in retrieved if c["confidence"] >= CONFIDENCE_THRESHOLD]
+
+    if len(conflict_candidates) < 2:
+        # Fewer than two chunks actually clear the confidence bar - there's
+        # nothing credible to compare, so skip the conflict check instead of
+        # letting a low-relevance chunk get compared against the real match
+        # and produce a false-positive conflict.
+        conflict_result = {"has_conflict": False, "conflicts": []}
+    else:
+        conflict_result = detect_conflicts(question, conflict_candidates)
 
     if conflict_result["has_conflict"]:
         log_conflict(question, conflict_result)
