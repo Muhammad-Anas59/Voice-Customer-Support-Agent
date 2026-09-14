@@ -77,7 +77,7 @@
   {
     "source": "03_website_faq.txt",
     "chunk_id": 0,
-    "text": "Q: How long do I have to return an item?\nA: You have 14 days from the date you receive your order to return it for a refund. Items must be unworn with tags attached."
+    "text": "Q: How long do I have to return an item?\nA: You have 30 days from the date you receive your order to return it for a refund. Items must be unworn with tags attached."
   },
   {
     "source": "03_website_faq.txt",
@@ -102,12 +102,17 @@
   {
     "source": "03_website_faq.txt",
     "chunk_id": 5,
-    "text": "Q: How long does a refund take once you receive my return?\nA: Refunds are typically processed within 3-5 business days of us receiving the item back."
+    "text": "Q: How long does a refund take once you receive my return?\nA: Refunds are typically processed within 5-7 business days of us receiving the item back."
   },
   {
     "source": "03_website_faq.txt",
     "chunk_id": 6,
-    "text": "Q: Are sale items returnable?\nA: All sale items are final sale and cannot be returned or exchanged."
+    "text": "Q: Are sale items returnable?\nA: Items purchased during a sale (30% off or more) are eligible for store credit only, unless the item is defective."
+  },
+  {
+    "source": "03_website_faq.txt",
+    "chunk_id": 7,
+    "text": "Q: Can I cancel my order after I place it?\nA: Yes, you can cancel your order within 24 hours of placing it, as long as it hasn't shipped yet."
   },
   {
     "source": "04_warranty_policy.txt",
@@ -142,7 +147,7 @@
   {
     "source": "05_cancellation_policy.txt",
     "chunk_id": 1,
-    "text": "2. Modifying an Order\nChanges to size, color, or shipping address can only be requested within the same 1-hour window. Contact support immediately \u2014 we cannot guarantee changes once fulfillment has started."
+    "text": "2. Modifying an Order\nChanges to size, color, or shipping address on an order that has NOT yet shipped can only be requested within the same 1-hour window as cancellations. This does not apply to exchanges on items you have already received \u2014 see our Returns & Exchanges policy for that. Contact support immediately \u2014 we cannot guarantee changes once fulfillment has started."
   },
   {
     "source": "05_cancellation_policy.txt",

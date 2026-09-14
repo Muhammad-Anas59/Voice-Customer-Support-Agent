@@ -13,6 +13,7 @@ internally which engine should handle it and returns one clean answer.
 
 import sys
 import os
+import re
 
 sys.path.insert(0, os.path.dirname(__file__))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "integrations"))
@@ -23,6 +24,94 @@ from order_lookup import find_order
 from sentiment_detector import check_sentiment
 from escalation_logger import log_escalation
 from interaction_logger import log_interaction
+
+
+# --- Chit-chat detection (greetings/thanks/goodbyes) ---
+# Catches simple pleasantries BEFORE they ever reach the RAG pipeline.
+# Without this, a short message like "thanks for your time" was handled
+# inconsistently - sometimes retrieval happened to land near a similar-
+# sounding FAQ chunk and got a real answer, sometimes it didn't and got
+# escalated as a failed policy lookup. Neither outcome is wrong exactly,
+# but relying on embedding luck for something this simple is fragile.
+#
+# Deliberately conservative: splits the message on commas and classifies
+# each piece separately - only treats the WHOLE message as chit-chat if
+# EVERY piece is a recognized pleasantry. This handles compound phrases
+# like "Hi, how are you?" or "Okay, goodbye." correctly, while a message
+# like "thanks, what's your return policy?" still falls through to real
+# routing untouched, since "what's your return policy" isn't in the
+# recognized pleasantry list.
+
+_ATOMIC_PATTERNS = [
+    (re.compile(r"^(hi|hello|hey)$", re.IGNORECASE), "greeting"),
+    (re.compile(r"^good (morning|afternoon|evening)$", re.IGNORECASE), "greeting"),
+    (re.compile(r"^how('?s| is| are) (it going|you( doing)?)$", re.IGNORECASE), "wellbeing"),
+    (re.compile(r"^what'?s (up|going on|new)$", re.IGNORECASE), "casual_opener"),
+    (re.compile(r"^(ok(ay)?|alright|well)$", re.IGNORECASE), "filler"),
+    (re.compile(
+        r"^(thanks?( you)?|thank you)( so much| very much)?"
+        r"( for (your|the) (time|help|information|kindness))?$",
+        re.IGNORECASE
+    ), "thanks"),
+    (re.compile(r"^i (just )?(said|say) thank(s| you)$", re.IGNORECASE), "thanks"),
+    (re.compile(r"^(got it|sounds good|cool|great|perfect|no worries)$", re.IGNORECASE), "ack"),
+    (re.compile(r"^(bye|goodbye|see you( later)?)$", re.IGNORECASE), "farewell"),
+    (re.compile(r"^that('?s| is) all( for now)?$", re.IGNORECASE), "farewell"),
+    (re.compile(r"^nothing else$", re.IGNORECASE), "farewell"),
+    (re.compile(r"^i'?m good$", re.IGNORECASE), "farewell"),
+    (re.compile(r"^no(,)? (that'?s all|thanks)$", re.IGNORECASE), "farewell"),
+]
+
+_CHITCHAT_REPLIES = {
+    "wellbeing": "I'm doing great, thanks for asking! How can I help you today?",
+    "casual_opener": "Not much on my end - ready to help whenever you need it! What can I do for you today?",
+    "greeting": "Hi there! How can I help you today?",
+    "thanks": "You're very welcome! Let us know if you need anything else.",
+    "farewell": "Take care! Feel free to reach out anytime you need help.",
+    "ack": "Sounds good! Let us know if you need anything else.",
+    "filler": "Sounds good! Let us know if you need anything else.",
+}
+# Priority order when a message has multiple recognized pieces (e.g.
+# "Hi, how are you?" -> greeting + wellbeing -> wellbeing's reply wins,
+# since it's the more specific/substantive of the two).
+_CATEGORY_PRIORITY = ["wellbeing", "casual_opener", "greeting", "thanks", "farewell", "ack", "filler"]
+
+
+def _classify_segment(segment):
+    segment = segment.strip().rstrip("!.?").strip()
+    for pattern, category in _ATOMIC_PATTERNS:
+        if pattern.match(segment):
+            return category
+    return None
+
+
+def detect_chitchat(question):
+    """Returns a canned reply if the ENTIRE message (every comma-separated
+    piece of it) is a recognized pleasantry, otherwise None so the caller
+    falls through to real routing."""
+    text = question.strip()
+    if not text or len(text.split()) > 8:
+        return None
+
+    pieces = [p for p in text.rstrip("!.?").split(",")]
+    categories = []
+    for piece in pieces:
+        piece = piece.strip()
+        if not piece:
+            continue
+        category = _classify_segment(piece)
+        if category is None:
+            return None  # one unrecognized piece means this isn't pure chit-chat
+        categories.append(category)
+
+    if not categories:
+        return None
+
+    for preferred in _CATEGORY_PRIORITY:
+        if preferred in categories:
+            return _CHITCHAT_REPLIES[preferred]
+
+    return None
 
 
 def reset_flow_state(conversation_state):
@@ -230,6 +319,17 @@ def _get_response_inner(question, conversation_state, index, chunks):
             "answer": "I can see this is important and want to make sure it's handled properly - I'm escalating this to a team member right away.",
             "escalated": True,
             "reason": reason,
+            "needs_followup": False
+        }
+
+    # Chit-chat check runs BEFORE routing/RAG - a plain "thanks" or "hi"
+    # should never be treated as a failed policy lookup.
+    chitchat_reply = detect_chitchat(question)
+    if chitchat_reply:
+        log_interaction(question, handler="chitchat", resolved=True)
+        return {
+            "answer": chitchat_reply,
+            "escalated": False,
             "needs_followup": False
         }
 

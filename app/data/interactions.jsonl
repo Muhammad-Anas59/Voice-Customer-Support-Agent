@@ -161,3 +161,47 @@
 {"timestamp": "2026-09-13T16:30:58.819951", "question": "What are your shipping policies?", "handler": "policy", "resolved": true, "confidence": 0.6387662291526794, "category": null}
 {"timestamp": "2026-09-13T16:41:30.329945", "question": "What are your current shipping policies?", "handler": "policy", "resolved": false, "confidence": 0.6361221075057983, "category": "low_confidence"}
 {"timestamp": "2026-09-13T16:41:47.076610", "question": "What are your shipping policies?", "handler": "policy", "resolved": true, "confidence": 0.6387662291526794, "category": null}
+{"timestamp": "2026-09-14T15:19:48.445860", "question": "Can you please tell me your shipping policies?", "handler": "policy", "resolved": true, "confidence": 0.6373955011367798, "category": null}
+{"timestamp": "2026-09-14T15:20:27.343217", "question": "So what is your return policy?", "handler": "policy", "resolved": false, "confidence": 0.6535448431968689, "category": "policy_conflict"}
+{"timestamp": "2026-09-14T15:20:49.323049", "question": "Well, you should have some kind of return policies in your documents.", "handler": "policy", "resolved": false, "confidence": 0.6331586241722107, "category": "low_confidence"}
+{"timestamp": "2026-09-14T15:21:11.563696", "question": "I just want to know right now, what are your shipping policy\u2014 what are your return policies?", "handler": "policy", "resolved": false, "confidence": 0.6314063668251038, "category": "low_confidence"}
+{"timestamp": "2026-09-14T15:21:31.191185", "question": "In how many days I can return any item?", "handler": "policy", "resolved": false, "confidence": 0.6507489085197449, "category": "policy_conflict"}
+{"timestamp": "2026-09-14T15:21:54.559294", "question": "I got allergic reaction by wearing your products.", "handler": "sentiment_block", "resolved": false, "confidence": null, "category": "sentiment_urgency"}
+{"timestamp": "2026-09-14T15:22:18.223549", "question": "In which countries do you ship regularly?", "handler": "policy", "resolved": true, "confidence": 0.6638718843460083, "category": null}
+{"timestamp": "2026-09-14T15:22:49.461991", "question": "Are your products guaranteed enough to be wear\u2014", "handler": "policy", "resolved": false, "confidence": 0.6484976410865784, "category": "low_confidence"}
+{"timestamp": "2026-09-14T15:23:10.439427", "question": "Thanks for your kind information.", "handler": "policy", "resolved": false, "confidence": 0.5814964175224304, "category": "low_confidence"}
+{"timestamp": "2026-09-14T15:23:28.043667", "question": "I just said thank you.", "handler": "policy", "resolved": false, "confidence": 0.5706489682197571, "category": "low_confidence"}
+{"timestamp": "2026-09-14T15:38:24.522200", "question": "What are your current shipping policies?", "handler": "policy", "resolved": true, "confidence": 0.6361221075057983, "category": null}
+{"timestamp": "2026-09-14T15:39:01.376693", "question": "What are your return policies?", "handler": "policy", "resolved": true, "confidence": 0.6415787935256958, "category": null}
+{"timestamp": "2026-09-14T15:39:46.786628", "question": "Is there any current conflicting information in your policies?", "handler": "policy", "resolved": false, "confidence": 0.5872754454612732, "category": "low_confidence"}
+{"timestamp": "2026-09-14T15:40:21.105302", "question": "Okay, thanks for your time.", "handler": "policy", "resolved": true, "confidence": 0.5750212669372559, "category": null}
+{"timestamp": "2026-09-14T15:41:09.160649", "question": "In how many days I can return any item?", "handler": "policy", "resolved": true, "confidence": 0.6543217897415161, "category": null}
+{"timestamp": "2026-09-14T15:41:30.548860", "question": "Who is your owner?", "handler": "policy", "resolved": false, "confidence": 0.5712019801139832, "category": "low_confidence"}
+{"timestamp": "2026-09-14T15:41:43.857769", "question": "Okay.", "handler": "policy", "resolved": false, "confidence": 0.5759252309799194, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:15:14.218410", "question": "Hi, how are you?", "handler": "policy", "resolved": false, "confidence": 0.5652239918708801, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:15:31.241436", "question": "Okay, goodbye.", "handler": "policy", "resolved": false, "confidence": 0.5889857411384583, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:15:42.865362", "question": "Okay.", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:15:52.496210", "question": "Thank you very much.", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:15:59.654579", "question": "Hi.", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:16:13.212234", "question": "What's going on?", "handler": "policy", "resolved": false, "confidence": 0.5665531158447266, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:16:35.988654", "question": "inquire next?", "handler": "policy", "resolved": false, "confidence": 0.5728197693824768, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:16:36.160276", "question": "Nothing.", "handler": "policy", "resolved": false, "confidence": 0.5714318156242371, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:16:55.223882", "question": "Okay, close this chat and as I have nothing to inquire next.", "handler": "policy", "resolved": false, "confidence": 0.5719821453094482, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:17:06.556864", "question": "Thank you.", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:19:39.176995", "question": "Hey, what's up?", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:19:51.878605", "question": "What's going on?", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:19:52.810100", "question": "Hey.", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:20:02.657732", "question": "Goodbye.", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:20:04.592776", "question": "Right, anything you can say.", "handler": "policy", "resolved": false, "confidence": 0.5690329670906067, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:20:15.353615", "question": "Okay, goodbye.", "handler": "chitchat", "resolved": true, "confidence": null, "category": null}
+{"timestamp": "2026-09-14T16:20:46.421817", "question": "Okay, what's your return policy?", "handler": "policy", "resolved": true, "confidence": 0.6529919505119324, "category": null}
+{"timestamp": "2026-09-14T16:22:31.290785", "question": "How long is the warranty on shoes?", "handler": "policy", "resolved": true, "confidence": 0.6852113604545593, "category": null}
+{"timestamp": "2026-09-14T16:22:44.309004", "question": "Can I cancel my order?", "handler": "policy", "resolved": false, "confidence": 0.6882345676422119, "category": "policy_conflict"}
+{"timestamp": "2026-09-14T16:23:01.040553", "question": "This is unacceptable. I need help right now.", "handler": "sentiment_block", "resolved": false, "confidence": null, "category": "sentiment_urgency"}
+{"timestamp": "2026-09-14T16:23:54.181799", "question": "Thanks, but also, what's your warranty policy?", "handler": "policy", "resolved": true, "confidence": 0.6472575068473816, "category": null}
+{"timestamp": "2026-09-14T16:24:33.761980", "question": "Do you ship to Canada?", "handler": "policy", "resolved": true, "confidence": 0.663567066192627, "category": null}
+{"timestamp": "2026-09-14T16:24:35.753566", "question": "Repeat it from the other side.", "handler": "policy", "resolved": false, "confidence": 0.5787962079048157, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:25:00.212775", "question": "What are your current return policies? What are your current shipping policies? What are your", "handler": "policy", "resolved": false, "confidence": 0.637359082698822, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:25:20.121905", "question": "What are your return policies? What are your cancellation policies? What are your shipping policies? How do you handle the order?", "handler": "policy", "resolved": false, "confidence": 0.6428524851799011, "category": "policy_conflict"}
+{"timestamp": "2026-09-14T16:26:04.758423", "question": "Are you a co-commissioner?", "handler": "policy", "resolved": false, "confidence": 0.5670962929725647, "category": "low_confidence"}
+{"timestamp": "2026-09-14T16:46:16.847535", "question": "What is your return policy?", "handler": "policy", "resolved": true, "confidence": 0.652799129486084, "category": null}

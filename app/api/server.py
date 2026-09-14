@@ -86,11 +86,27 @@ def make_transcriber(sid):
             return
 
         if sess["agent_speaking"]:
-            return  # ignore the agent hearing its own TTS output
+            # Busy for the WHOLE lifecycle of the previous question - still
+            # thinking, or still speaking the answer. Ignore this turn
+            # entirely rather than spawning a second concurrent thread that
+            # would race the first one on the shared conversation_state and
+            # then clobber its audio mid-playback.
+            socketio.emit(
+                "still_busy",
+                {"text": "Still answering your last question - one moment!"},
+                to=sid,
+            )
+            return
 
         question = event.transcript.strip()
         if not question:
             return
+
+        # Mark busy immediately, before the thread even starts - this is
+        # what closes the race window. Cleared either when TTS playback
+        # finishes (agent_audio_done from the client) or immediately if
+        # TTS itself fails (see handle_question's except block below).
+        sess["agent_speaking"] = True
 
         socketio.emit("final_transcript", {"text": question}, to=sid)
         threading.Thread(target=handle_question, args=(sid, question), daemon=True).start()
@@ -140,10 +156,10 @@ def handle_question(sid, question):
         import traceback
         traceback.print_exc()
         answer = "Sorry, I hit an error processing that."
+        result = {"escalated": False}
 
-    socketio.emit("agent_text", {"text": answer}, to=sid)
+    socketio.emit("agent_text", {"text": answer, "escalated": result.get("escalated", False)}, to=sid)
 
-    sess["agent_speaking"] = True
     try:
         audio = tts_client.text_to_speech.convert(
             text=answer, voice_id=VOICE_ID, model_id=MODEL_ID, output_format="mp3_44100_128"
@@ -151,13 +167,20 @@ def handle_question(sid, question):
         audio_bytes = b"".join(audio)  # SDK returns a generator of chunks
         b64 = base64.b64encode(audio_bytes).decode("ascii")
         socketio.emit("agent_audio", {"audio_b64": b64, "mime": "audio/mpeg"}, to=sid)
+        # agent_speaking stays True until the client's audio finishes and
+        # sends agent_audio_done (see that handler below) - that's the
+        # correct end of this question's lifecycle.
     except Exception as e:
         print(f"[TTS] Failed: {e}")
-    finally:
-        # Client tells us when playback actually finishes (see agent_audio_done
-        # handler below) - that's more accurate than guessing a fixed delay
-        # server-side, since MP3 duration varies with answer length.
-        pass
+        # No audio will ever play, so agent_audio_done will never arrive -
+        # clear the busy flag ourselves here, or the session would be
+        # permanently stuck ignoring every future question.
+        sess["agent_speaking"] = False
+        socketio.emit(
+            "tts_failed",
+            {"text": "Answer ready, but voice playback failed - listening again."},
+            to=sid,
+        )
 
 
 @socketio.on("connect")
