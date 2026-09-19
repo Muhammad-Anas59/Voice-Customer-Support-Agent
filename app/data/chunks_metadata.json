@@ -112,7 +112,7 @@
   {
     "source": "03_website_faq.txt",
     "chunk_id": 7,
-    "text": "Q: Can I cancel my order after I place it?\nA: Yes, you can cancel your order within 24 hours of placing it, as long as it hasn't shipped yet."
+    "text": "Q: Can I cancel my order after I place it?\nA: Yes, you can cancel your order within 1 hour of placing it, as long as it hasn't shipped yet."
   },
   {
     "source": "04_warranty_policy.txt",

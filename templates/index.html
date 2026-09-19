@@ -404,6 +404,14 @@
     }, 3000);
   });
 
+  socket.on("rate_limited", (d) => {
+    liveCaption.textContent = d.text;
+    if (sessionActive) setState("listening");
+    setTimeout(() => {
+      if (liveCaption.textContent === d.text) liveCaption.textContent = "";
+    }, 3000);
+  });
+
   socket.on("final_transcript", (d) => {
     liveCaption.textContent = "";
     addMessage("user", d.text);

@@ -58,6 +58,11 @@ Do NOT flag it if:
   customer asked (e.g. the customer asked about refund timing, and the
   chunks also happen to disagree about sale-item eligibility - that's a
   real conflict, but not this question's conflict, so don't report it here).
+- The customer's message contains multiple distinct questions (e.g. asks
+  about two different policies in one turn). In that case, only compare
+  chunks that answer the SAME sub-question against each other - never
+  compare a chunk answering one sub-question to a chunk answering a
+  different one.
 
 CUSTOMER QUESTION:
 {question}
@@ -116,6 +121,8 @@ def detect_conflicts(question, chunks):
         parsed = json.loads(raw)
         if "has_conflict" not in parsed or "conflicts" not in parsed:
             raise ValueError("Malformed conflict-check response shape")
+        if parsed.get("has_conflict"):
+            print(f"[conflict_detector] Conflict detected: {parsed['conflicts']}")
         return parsed
 
     except Exception as e:

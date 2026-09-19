@@ -4,3 +4,5 @@ __pycache__/
 .env
 *.log
 app/data/conflicts_log.json
+app/data/escalation_tickets.jsonl
+app/data/interactions.jsonl

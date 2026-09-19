@@ -1,0 +1,24 @@
+# --- Reused from AI Support Agent (RAG core) ---
+google-genai>=1.0.0
+faiss-cpu>=1.7.4
+flask>=3.0.0
+python-dotenv>=1.0.0
+numpy>=1.24.0
+flask-cors
+flask-limiter
+
+# --- New: voice layer ---
+assemblyai>=1.0.0
+elevenlabs>=1.0.0
+
+# --- New: real-time WebSocket bridge (mic in / audio out) ---
+flask-socketio
+python-socketio
+simple-websocket
+# NOTE: eventlet was tried first but conflicts with AssemblyAI's SDK,
+# which uses real OS threads for its keepalive ping (not greenlet-safe).
+# Switched to Flask-SocketIO's "threading" async_mode instead, which
+# needs simple-websocket to support real WebSocket transport on
+# Werkzeug's dev server. eventlet is no longer required - remove it
+# from your venv if you want to keep things clean:
+#   pip uninstall eventlet

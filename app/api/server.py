@@ -144,10 +144,26 @@ def make_transcriber(sid):
     raise last_error
 
 
+RATE_LIMIT_MAX_QUESTIONS = 5
+RATE_LIMIT_WINDOW_SECONDS = 60
+
+
 def handle_question(sid, question):
     sess = sessions.get(sid)
     if not sess:
         return
+
+    now = time.time()
+    recent = sess.setdefault("question_times", [])
+    recent[:] = [t for t in recent if now - t < RATE_LIMIT_WINDOW_SECONDS]
+    if len(recent) >= RATE_LIMIT_MAX_QUESTIONS:
+        socketio.emit(
+            "rate_limited",
+            {"text": "You're asking questions a bit quickly - please wait a moment before the next one."},
+            to=sid,
+        )
+        return
+    recent.append(now)
 
     try:
         result = get_response(question, sess["conversation_state"], index, chunks)

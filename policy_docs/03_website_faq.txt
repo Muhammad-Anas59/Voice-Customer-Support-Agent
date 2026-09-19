@@ -25,4 +25,4 @@ Q: Are sale items returnable?
 A: Items purchased during a sale (30% off or more) are eligible for store credit only, unless the item is defective.
 
 Q: Can I cancel my order after I place it?
-A: Yes, you can cancel your order within 24 hours of placing it, as long as it hasn't shipped yet.
+A: Yes, you can cancel your order within 1 hour of placing it, as long as it hasn't shipped yet.
