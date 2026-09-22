@@ -1,6 +1,6 @@
 # Verve Athletics — Voice Support Agent
 
-A voice-enabled AI customer support agent for **Verve Athletics**, a fictional
+A voice-enabled AI customer support agent for **Verve Athletics**, an
 activewear brand. A customer speaks a question, it's transcribed in
 real time, answered by a production-grade RAG pipeline, and spoken back
 out loud — a full voice conversation loop, live at
