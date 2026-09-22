@@ -27,11 +27,11 @@ Built for the **AssemblyAI Voice Agent Hackathon** (lablab.ai), September 2026.
 
 | Idle | Listening |
 |---|---|
-| ![Idle state](docs/project-images/idle-empty.png) | ![Listening](docs/project-images/listening.png) |
+| ![Idle state](docs/idle-empty.png) | ![Listening](docs/listening.png) |
 
 | Answered | Escalation |
 |---|---|
-| ![Answered](docs/project-images/idle-answered.png) | ![Escalation](docs/project-images/escalation.png) |
+| ![Answered](docs/idle-answered.png) | ![Escalation](docs/escalation.png) |
 
 ## Architecture
 
