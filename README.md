@@ -1,6 +1,6 @@
 # Verve Athletics — Voice Support Agent
 
-A voice-enabled AI customer support agent for **Verve Athletics**, an
+A voice-enabled AI customer support agent for **Verve Athletics**, a fictional
 activewear brand. A customer speaks a question, it's transcribed in
 real time, answered by a production-grade RAG pipeline, and spoken back
 out loud — a full voice conversation loop, live at
@@ -76,9 +76,8 @@ same specific point, the agent doesn't guess which one is right — it
 flags the discrepancy and escalates to a human. During this hackathon's
 deployment testing, this caught a real contradiction between two policy
 documents (a 24-hour vs. 1-hour cancellation window) that had been
-sitting unnoticed in the knowledge base. It wasn't a scripted demo case
-— the system found it on its own, and the documents were corrected as a
-result.
+sitting unnoticed in the knowledge base — a genuine discrepancy the
+system found and surfaced on its own.
 
 ## Tech stack
 
